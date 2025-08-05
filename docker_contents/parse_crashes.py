@@ -21,7 +21,7 @@ def main():
 
     for file in os.listdir('/workspace/crash-files'):
         print('parsing file', file)
-        with open('/workspace/crash-files/' + file) as crash_file:
+        with open('/workspace/crash-files/' + file, encoding='utf-8', errors='ignore') as crash_file:
             crash_file_contents = crash_file.read()
 
             response = chat(
